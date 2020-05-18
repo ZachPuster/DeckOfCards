@@ -43,11 +43,15 @@ namespace cards.Controllers
             DealXCards(1);    
         }
 
-        private void DealXCards(int numCards)//Guarantee that an input does not exceed list size
+        /**
+         * Card dealing function. Shuffles and writes out to console passed in amount of cards
+         * int numCards
+         * return void
+         */
+        private void DealXCards(int numCards)
         {
-            //var newCards = new Deck();
             Shuffle(cards);
-            if (numCards > cards.Count)
+            if (numCards > cards.Count)//Guarantee that an input does not exceed list size
             {
                 numCards = cards.Count;
             }
